@@ -99,6 +99,8 @@ void stack_sub(stack_t **stack, unsigned int line_num)
 
 	(*stack)->n = sub;
 }
+
+
 /**
  * stack_mul - multiplies the second top element of a stack by the top element
  * @stack: pointer to lists for monty stack
