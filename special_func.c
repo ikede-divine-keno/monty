@@ -2,6 +2,8 @@
 #include<stdio.h>
 #include "monty.h"
 
+diff_t diff;
+
 /**
  * read_file - reads a bytecode file and runs commands
  * @fileptr: pathname to file

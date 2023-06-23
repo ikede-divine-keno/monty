@@ -1,11 +1,13 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <ctype.h>
+#include <sys/mman.h>
 
 /*--- Struct Definitions ---*/
 extern int arg_stack;
@@ -46,14 +48,14 @@ typedef struct instruction_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
-typedef struct globe_var
+typedef struct diff_s
 {
 	FILE *f;
 	int arg_stack;
 	char *buffer;
-} globe_var;
+} diff_t;
 
-extern globe_var diff;
+extern diff_t diff;
 
 void read_file(char *fileptr, stack_t **stack);
 char *parse_line(char *line, stack_t **stack, unsigned int line_num);
@@ -64,5 +66,5 @@ void stack_pall(stack_t **stack, unsigned int line_num);
 void stack_push(stack_t **stack, unsigned int line_num);
 void stack_pint(stack_t **stack, unsigned int line_num);
 void stack_pop(stack_t **stack, unsigned int line_num);
-
+void free_stack(stack_t *head);
 #endif
