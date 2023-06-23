@@ -1,3 +1,4 @@
+#include "monty.h"
 /**
  * stack_div - divides tge second top element of stack by the top element
  * @stack: pointer to lists for monty stack
