@@ -65,6 +65,10 @@ instruct_func op_func_obt(char *s)
 		{"swap", stack_swap},
 		{"add", stack_add},
 		{"nop", stack_nop},
+		{"sub", stack_sub},
+		{"mul", stack_mul},
+		{"div", stack_div},
+		{"mod", stack_mod},
 		{NULL, NULL},
 	};
 
