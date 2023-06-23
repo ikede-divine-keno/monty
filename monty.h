@@ -70,4 +70,5 @@ void free_stack(stack_t *head);
 void stack_swap(stack_t **stack, unsigned int line_num);
 void stack_add(stack_t **stack, unsigned int line_num);
 void stack_nop(stack_t **stack, unsigned int line_num);
+void stack_sub(stack_t **stack, unsigned int line_num);
 #endif
