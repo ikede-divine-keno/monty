@@ -99,4 +99,28 @@ void stack_sub(stack_t **stack, unsigned int line_num)
 
 	(*stack)->n = sub;
 }
+/**
+ * stack_mul - multiplies the second top element of a stack by the top element
+ * @stack: pointer to lists for monty stack
+ * @line_num: number of line opcode occurs on
+ */
+void stack_mul(stack_t **stack, unsigned int line_num)
+{
+	int ai;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line_num);
+		free(diff.buffer);
+		fclose(diff.f);
+		free_stack(*stack);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		ai = (*stack)->n;
+		stack_pop(stack, line_num);
+		(*stack)->n *= ai;
+	}
+}
 
