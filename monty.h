@@ -74,5 +74,9 @@ void stack_sub(stack_t **stack, unsigned int line_num);
 void stack_mul(stack_t **stack, unsigned int line_num);
 void stack_div(stack_t **stack, unsigned int line_num);
 void stack_mod(stack_t **stack, unsigned int line_num);
+void stack_pchar(stack_t **stack, unsigned int line_num);
+void stack_pstr(stack_t **stack, unsigned int line_num);
+void stack_rotl(stack_t **stack, unsigned int line_num);
+void stack_rotr(stack_t **stack, unsigned int line_num);
 
 #endif
