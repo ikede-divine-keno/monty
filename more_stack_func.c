@@ -3,7 +3,7 @@
 /**
  * stack_pchar - prints the ASCII value of char at the top of the stack.
  * @stack: pointer to the top of the stack
- * @line_number: the index of the current line
+ * @line_num: the index of the current line
  */
 void stack_pchar(stack_t **stack, unsigned int line_num)
 {
