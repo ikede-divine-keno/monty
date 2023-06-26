@@ -56,9 +56,9 @@ void stack_add(stack_t **stack, unsigned int line_num)
 }
 
 /**
- * @stack_nop - this opcode does not do anything.
+ * stack_nop - this opcode doesn't do anything.
  * @stack: pointer to lists for monty stack
- * @line_number: number of line opcode occurs on
+ * @line_num: number of line opcode occurs on
  */
 
 void stack_nop(__attribute__ ((unused))stack_t **stack,
