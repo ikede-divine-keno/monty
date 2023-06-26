@@ -9,9 +9,6 @@
 #include <ctype.h>
 #include <sys/mman.h>
 
-#define STACK 0
-#define QUEUE 1
-
 /*--- Struct Definitions ---*/
 extern int arg_stack;
 
@@ -81,7 +78,5 @@ void stack_pchar(stack_t **stack, unsigned int line_num);
 void stack_pstr(stack_t **stack, unsigned int line_num);
 void stack_rotl(stack_t **stack, unsigned int line_num);
 void stack_rotr(stack_t **stack, unsigned int line_num);
-void queue_stack(stack_t **stack, unsigned int line_num);
-void stack_queue(stack_t **stack, unsigned int line_num);
 
 #endif
