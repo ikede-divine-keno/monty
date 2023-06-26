@@ -46,9 +46,9 @@ int _isalpha(int s)
 }
 
 /**
- * _pstr - prints the string 9f top of stack
+ * stack_pstr - prints the string 9f top of stack
  * @stack: pointer to lists for monty stack
- * @line_number: number of line opcode occurs on
+ * @line_num: number of line opcode occurs on
  */
 void stack_pstr(stack_t **stack, unsigned int line_num)
 {
@@ -90,6 +90,34 @@ void stack_rotl(stack_t **stack, unsigned int line_num)
 	{
 		printer = printer->next;
 		printer->prev->n = printer->n;
+	}
+
+	printer->n = x1;
+}
+
+/**
+ * stack_rotr - rotates the stack to the bottom.
+ * @stack: pointer to lists for monty stack
+ * @line_num: number of line opcode occurs on
+ */
+void stack_rotr(stack_t **stack, unsigned int line_num)
+{
+	stack_t *printer = *stack;
+
+	int x1 = 0;
+
+	if (!line_num || !stack || !*stack || !(*stack)->next)
+		return;
+
+	while (printer->next)
+		printer = printer->next;
+
+	x1 = printer->n;
+
+	while (printer->prev)
+	{
+		printer = printer->prev;
+		printer->next->n = printer->n;
 	}
 
 	printer->n = x1;
