@@ -71,8 +71,8 @@ instruct_func op_func_obt(char *s)
 		{"mod", stack_mod},
 		{"pchar", stack_pchar},
 		{"pstr", stack_pstr},
-		/*{"rotl", stack_rotl},
-		*{"rotr", stack_rotr},
+		{"rotl", stack_rotl},
+		/*{"rotr", stack_rotr},
 		{NULL, NULL},*/
 	};
 

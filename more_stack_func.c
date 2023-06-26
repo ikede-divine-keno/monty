@@ -68,3 +68,29 @@ void stack_pstr(stack_t **stack, unsigned int line_num)
 	}
 	putchar('\n');
 }
+
+/**
+ * stack_rotl - rotates the stack to the top.
+ * @stack: pointer to lists for monty stack
+ * @line_num: number of line opcode occurs on
+ */
+void stack_rotl(stack_t **stack, unsigned int line_num)
+{
+	stack_t *printer = *stack;
+
+
+	int x1 = 0;
+
+	if (!line_num || !stack || !*stack || !(*stack)->next)
+		return;
+
+	x1 = printer->n;
+
+	while (printer->next)
+	{
+		printer = printer->next;
+		printer->prev->n = printer->n;
+	}
+
+	printer->n = x1;
+}
